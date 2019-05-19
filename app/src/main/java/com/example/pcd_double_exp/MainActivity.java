@@ -206,10 +206,15 @@ public class MainActivity extends AppCompatActivity {
         for(int i=0; i<width; i++){
             for(int j=0; j<height;j++){
                 colorPixel=original.getPixel(i,j);
-                A = 255f/(100f/value);
+                //A = 255f/(100f/value);
                 R= Color.red(colorPixel);
                 G=Color.green(colorPixel);
                 B=Color.blue(colorPixel);
+
+                if(!(R>=200 && G>=200 && B>=200))
+                    A = 255f / (100f / value);
+                else
+                    A = 255;
 
                 finalImage.setPixel(i,j,Color.argb((int) A,R,G,B));
             }
