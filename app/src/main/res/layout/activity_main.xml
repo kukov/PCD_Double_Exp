@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context="com.example.doubleexposurepcd.MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:scaleType="centerInside"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/peisaj" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/seekBar"
+        android:layout_centerHorizontal="true"
+        android:text="50%" />
+
+
+    <LinearLayout
+        android:id="@+id/buttonWrapper"
+        android:layout_width="wrap_content"
+        android:layout_height="92dp"
+        android:layout_above="@+id/imageView2"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/goNext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginLeft="50dp"
+            android:layout_weight="1"
+            android:text="Change Base " />
+
+        <Button
+            android:id="@+id/changeImage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginLeft="45dp"
+            android:layout_weight="1"
+            android:text="Change Front " />
+    </LinearLayout>
+
+
+</RelativeLayout>
